@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe CustomersController, type: :controller do
+RSpec.describe SimpleMiddleware::CustomersController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
 
   describe "#create" do

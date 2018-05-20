@@ -38,12 +38,12 @@ class CustomersController < ApplicationController
   end
 
   def missing_access_token_error
-    render json: { errors: ["Access token not provided"] },
+    render json: { errors: [I18n.t("errors.missing_access_token")] },
           status: 401
   end
 
   def invalid_access_token_error
-    render json: { errors: ["Invalid access token"] },
+    render json: { errors: [I18n.t("errors.invalid_access_token")] },
           status: 401
   end
 

@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:timrogers/simple_middleware.git
+  revision: 316651d628a6f476718fa0542f0955de4fa33898
+  ref: 316651d
+  specs:
+    simple_middleware (0.1.0)
+      immutable-ruby (~> 0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +56,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -70,6 +79,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    immutable-ruby (0.0.3)
+      concurrent-ruby (~> 1.0.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -94,6 +105,11 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (1.0.0)
@@ -200,11 +216,13 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  pry-rails
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails-i18n (~> 5.1)
   rspec-rails
   sass-rails (~> 5.0)
+  simple_middleware!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
