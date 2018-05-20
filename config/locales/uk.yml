@@ -1,0 +1,8 @@
+uk:
+  errors:
+    missing_access_token: Відсутній токен доступу
+    invalid_access_token: Неприпустимий токен доступу
+  activerecord:
+    attributes:
+      customer:
+        iban: IBAN
