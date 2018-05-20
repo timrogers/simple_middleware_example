@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create(email: "tim@gocardless.com",
+                   access_token: "my_access_token")
+
+Customer.create(email: 'alice@gocardless.com',
+                iban: "GB29NWBK60161331926819")
+
