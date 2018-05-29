@@ -37,12 +37,14 @@ class SimpleMiddleware::CustomersController < ApplicationController
 
   private
 
-  def render_rack_response(response)
-    response[1].each do |header_name, header_value|
+  def render_rack_response(rack_response)
+    status, headers, body = rack_response
+
+    headers.each do |header_name, header_value|
       self.response.headers[header_name] = header_value
     end
 
-    render status: response.first,
-           body: response.last
+    render status: status,
+           body: body
   end
 end
