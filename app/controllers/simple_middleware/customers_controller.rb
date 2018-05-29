@@ -18,14 +18,15 @@ class SimpleMiddleware::CustomersController < ApplicationController
     private
 
     def build_customer_params(state)
-      params = ActionController::Parameters.new(state[:request].params)
-
-      params.require(:data).permit(:email, :iban).merge(user: state[:user])
+      state[:params].
+        require(:data).
+        permit(:email, :iban).
+        merge(user: state[:user])
     end
   end
 
   def create
-    response = SimpleMiddleware.call(initial_state: { request: request },
+    response = SimpleMiddleware.call(initial_state: { request: request, params: params },
                                      middlewares: [Middleware::Locale,
                                                    Middleware::AuthorizationHeader,
                                                    Middleware::AccessToken,
